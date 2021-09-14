@@ -37,7 +37,7 @@ class CinemaRepository extends ServiceEntityRepository
     */
 
     
-    public function findCinemaByName($value): ?Cinema
+    public function findCinemaByOrganisme($value): ?Cinema
     {
         return $this->createQueryBuilder('c')
             ->andWhere('c.organisme = :val')

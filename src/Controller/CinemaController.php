@@ -58,7 +58,7 @@ class CinemaController extends AbstractController
         
         $query = $request->request->get('form')['query'];
         if($query) {
-            $cinema = $repo->findCinemaByName($query);
+            $cinema = $repo->findCinemaByOrganisme($query);
         }
 
         if (!$cinema) {
