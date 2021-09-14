@@ -1,0 +1,7 @@
+{{ form(form) }}
+
+{% for message in app.flashes('danger') %}
+    <div class="flash-danger">
+        {{ message }}
+    </div>
+{% endfor %}

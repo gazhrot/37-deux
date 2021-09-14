@@ -1,0 +1,12 @@
+<div>
+    {% if cinema | length == 0 %}
+        <h4>Aucun résulat pour votre recherche.</h4>
+       {% else %}
+           <h3 class="mt-3">Vos résulats de recherche :</h3>
+               organisme : {{ cinema.organisme }}
+               <br>
+               site web : {{ cinema.siteWeb}}
+               <br>
+               adresse : {{ cinema.adresse }}
+      {% endif %}
+ </div>
