@@ -29,12 +29,9 @@ class ImportCinemaCommand extends Command
     protected function configure(): void
     {
         $this
-        // the short description shown while running "php bin/console list"
-        ->setDescription('Creates a new user.')
+        ->setDescription('Imports a new sets of Cinemas from JSON.')
 
-        // the full command description shown when running the command with
-        // the "--help" option
-        ->setHelp('This command allows you to create a user...')
+        ->setHelp('This command allows you to create a few cinemas from JSON')
     	;
     }
 
@@ -42,7 +39,7 @@ class ImportCinemaCommand extends Command
     {
         $io = new SymfonyStyle($input, $output);
         
-		$json = json_decode(file_get_contents('C:\Users\Gazh\Desktop\224400028_salles-de-cinema-en-loire-atlantique.json'), true);
+		$json = json_decode(file_get_contents('chemin du json'), true);
 
 		foreach($json as $data) {
 			$this->manager->persist($this->cinemaService->CreateCinema($data));
